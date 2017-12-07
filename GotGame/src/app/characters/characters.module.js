@@ -9,8 +9,8 @@ import routeConfig from './characters.route';
 const MODULE_NAME = './app.characters';
 const charactersModule = angular.module(MODULE_NAME, [angularUiRouter]);
 
-charactersModule.factory('CharactersService', charactersService);
-charactersModule.controller('CharactersListController', charactersListController);
+charactersModule.factory('charactersService', charactersService);
+charactersModule.controller('charactersListController', charactersListController);
 charactersModule.config(routeConfig);
 
 export default MODULE_NAME;
