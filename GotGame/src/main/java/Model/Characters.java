@@ -1,11 +1,11 @@
-package Hello;
+package Model;
 
 import java.io.Serializable;
 import javax.persistence.*;
 
 @Entity
 @Table(name = "customer")
-public class City implements Serializable {
+public class Characters implements Serializable {
 
     @Id
     @GeneratedValue
@@ -15,7 +15,10 @@ public class City implements Serializable {
     private String name;
 
     @Column(nullable = false)
-    private String state;
+    private String firstName;
+
+    @Column(nullable = false)
+    private String family;
 
     public Long getId() {
         return id;
@@ -33,11 +36,19 @@ public class City implements Serializable {
         this.name = name;
     }
 
-    public String getState() {
-        return state;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setState(String state) {
-        this.state = state;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getFamily() {
+        return family;
+    }
+
+    public void setFamily(String family) {
+        this.family = family;
     }
 }
