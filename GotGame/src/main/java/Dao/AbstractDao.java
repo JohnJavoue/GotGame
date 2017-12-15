@@ -6,7 +6,7 @@ import javax.persistence.PersistenceContext;
 abstract class AbstractDao<T> {
 
     @PersistenceContext
-    private EntityManager entityManager;
+    EntityManager entityManager;
 
     abstract T find(long id);
 
